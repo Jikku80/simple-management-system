@@ -17,15 +17,16 @@
                     if (resItem.email == signupemail.value){
                         signupemail.style.borderColor = "crimson";
                         sameemail.classList.remove("hidden");
-                        bool = true;
-                        return;
+                        return bool = true
                     }
                 })
             })
-        if (bool != true){
-            signupbutton.removeEventListener("click", signupclick);
-            signupbutton.click();
-        }
+        setTimeout(()=> {
+            if (bool != true){
+                signupbutton.removeEventListener("click", signupclick);
+                signupbutton.click();
+            }
+        }, 3000)
         if (pwdVal.length < 6) {
             e.preventDefault();
             signuppassword.style.borderColor = "crimson";

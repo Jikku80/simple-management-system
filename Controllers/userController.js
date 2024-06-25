@@ -41,7 +41,7 @@ exports.signup = (req, res, next) => {
             let inun = newUserName.toLowerCase()
             let allUserNames = []
             UserList.forEach((item) => {
-                userNames = item.email
+                let userNames = item.email
                 allUserNames.push(userNames.toLowerCase())
             })
 
